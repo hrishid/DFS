@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DFS.Views.Profile.ProfilePage">
+    <ContentPage.Content>
+        <Grid x:Name="grid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!--<StackLayout Grid.ColumnSpan="2"
+                         BackgroundColor="#D3D3D3">
+                <Label Text="Student Details" 
+                   FontSize="Large"                   
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"></Label>
+            </StackLayout>-->
+
+            <ListView ItemsSource="{Binding ProfileList}"
+                      Grid.Row="0"                      
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="0,20,10,10"
+                                  ColumnSpacing="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.6*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding ImageIcon}"
+                                       HeightRequest="30"
+                                       WidthRequest="30"
+                                       HorizontalOptions="Center"
+                                       Grid.Column="0"
+                                       ></Image>
+                                <Label Text="{Binding Header}"
+                                   Grid.Column="1"
+                                   HorizontalOptions="Start"
+                                   HorizontalTextAlignment="Start"
+                                   ></Label>
+                                <Label Text="{Binding paramter}"                                  
+                                   HorizontalOptions="Start"
+                                   HorizontalTextAlignment="Start"
+                                   Grid.Column="2"></Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

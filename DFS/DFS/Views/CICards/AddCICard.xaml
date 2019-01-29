@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="WhiteSmoke"
+             Title="Create CI Card"
+             x:Class="DFS.Views.CICards.AddCICard">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Padding="20" RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Entry HorizontalOptions="FillAndExpand" Grid.Row="0" Placeholder="Card Name" ></Entry>
+                <StackLayout Orientation="Horizontal" Grid.Row="1"  Spacing="20"  HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Vertical" Spacing="20" HorizontalOptions="FillAndExpand">
+                       
+                        <Label Text="Locations"></Label>
+                        <Picker ItemsSource="{Binding Locations}" Title="Select" SelectedItem="{Binding SelectedLocation}"></Picker>
+                        <Label Text="Department"></Label>
+                        <Picker ItemsSource="{Binding Departments}" Title="Select" SelectedItem="{Binding SelectedDepartment}"></Picker>
+                        <Label Text="CI Bucket"></Label>
+                        <Picker ItemsSource="{Binding CIBucketList}" Title="Select" SelectedItem="{Binding SelectedBucket}"></Picker>
+                        <Label IsEnabled="False" BackgroundColor="LightGray"
+                               HeightRequest="25"
+                               TextColor="White" Text="{Binding UserName}"></Label>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="FillAndExpand" Spacing="20">
+                        
+                        <Label Text="Value Stream"></Label>
+                        <Picker ItemsSource="{Binding DynamicFlows}" Title="Select" SelectedItem="{Binding SelectedFlow}"></Picker>
+                        <Label Text="Process Steps"></Label>
+                        <Picker ItemsSource="{Binding ProcessSteps}" Title="Select" SelectedItem="{Binding SelectedProcess}"></Picker>
+                        <Label Text="Date"></Label>
+                        <DatePicker DateSelected="DatePicker_DateSelected"></DatePicker>
+                        <Label IsEnabled="False" HeightRequest="25" BackgroundColor="LightGray" TextColor="White" Text="{Binding Email}"></Label>
+
+                    </StackLayout>
+
+                </StackLayout>
+                <Label Text="Description" Grid.Row="2"></Label>
+                <Editor Text="{Binding DescriptionText}" 
+                    Grid.Row="3"
+                    BackgroundColor="White"
+                    HeightRequest="250"/>
+                <StackLayout Grid.Row="4" Orientation="Horizontal" Spacing="20">
+                    <Label Text="Add Image"></Label>
+                    <Image Source="addalbum.png" HeightRequest="40" WidthRequest="40">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+                <Image x:Name="image" Grid.Row="5" HeightRequest="90"/>
+                <Button Text="Create Card"
+                    Clicked="Button_Clicked"
+                    Grid.Row="6"
+                    TextColor="White" 
+                    BackgroundColor="#1FBED6"></Button>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
