@@ -2,6 +2,7 @@
 using Plugin.Media;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,12 +15,14 @@ namespace DFS.Views.CICards
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class AddCICard : ContentPage
 	{
-		public AddCICard ()
+        AddCardViewModel vm = new AddCardViewModel();
+        public AddCICard ()
 		{
 			InitializeComponent ();
 
-            BindingContext = new AddCardViewModel();
-		}
+            BindingContext = vm;
+
+        }
 
         private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
         {
@@ -47,16 +50,23 @@ namespace DFS.Views.CICards
                 Name = "test.jpg"
             });
 
+           
+            
+
             if (file == null)
                 return;
 
             await DisplayAlert("File Location", file.Path, "OK");
-
+            Stream stream = null;
             image.Source = ImageSource.FromStream(() =>
             {
-                var stream = file.GetStream();
+                 stream = file.GetStream();
+
                 return stream;
             });
+            var bytes = new byte[stream.Length];
+            await stream.ReadAsync(bytes, 0, (int)stream.Length);
+            vm.Base64Image  = System.Convert.ToBase64String(bytes);
         }
     }
 }

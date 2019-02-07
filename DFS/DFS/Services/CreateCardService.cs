@@ -1,4 +1,5 @@
 ﻿using DFS.Core;
+using DFS.Models;
 using DFS.Services.Models;
 using Newtonsoft.Json;
 using System;
@@ -31,10 +32,32 @@ namespace DFS.Services
         Task<List<ProcessStepModel>> GetProcessStep(int locationId,int dynamicFlowId,int departmentId);
     }
 
-
-
-    public class CreateCardService :BaseAPI, ICreateCardService, IGetDynamicFlow,IGetDepartments,IGetBucketList, IGetProcessSteps
+    public interface IPostCardService
     {
+        Task<bool> PostCard(CICardModel card);
+    }
+
+
+
+    public class CreateCardService :BaseAPI, ICreateCardService, IGetDynamicFlow,IGetDepartments,IGetBucketList, IGetProcessSteps, IPostCardService
+    {
+        public async Task<bool>PostCard(CICardModel card)
+        {
+            using (var client = CreateClient("CiDashBoard/buckets?ClientID=" + App.User.clientId))
+            {
+                StringContent content = new StringContent(JsonConvert.SerializeObject(card));
+
+                HttpResponseMessage response = await client.PostAsync(client.BaseAddress,).ConfigureAwait(false);
+                if (response.IsSuccessStatusCode)
+                {
+                    return true;
+                }
+
+                return false;
+
+            }
+        }
+
         public async Task<List<BucketModel>> GetBucketList()
         {
             using (var client = CreateClient("CiDashBoard/buckets?ClientID=" + App.User.clientId))

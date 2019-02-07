@@ -1,15 +1,33 @@
-﻿using DFS.Services;
+﻿using DFS.Models;
+using DFS.Services;
 using DFS.Services.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace DFS.ViewModel
 {
     public class AddCardViewModel : BaseViewModel
     {
-        private string userName=App.User.firstName+" "+App.User.lastName;
+        private ICommand submitCommand;
+
+        public ICommand SubmitCommand
+        {
+            get { return submitCommand; }
+            set
+            {
+                submitCommand = value;
+                OnPropertyChanged("SubmitCommand");
+            }
+        }
+
+        CICardModel card = new CICardModel();
+
+
+        private string userName = App.User.firstName + " " + App.User.lastName;
 
         public string UserName
         {
@@ -22,7 +40,7 @@ namespace DFS.ViewModel
             }
         }
 
-        private string email=App.User.email;
+        private string email = App.User.email;
 
         public string Email
         {
@@ -36,6 +54,18 @@ namespace DFS.ViewModel
         }
 
 
+        private string rootCause;
+
+        public string RootCause
+        {
+            get { return rootCause; }
+            set
+            {
+                rootCause = value;
+                OnPropertyChanged("RootCause");
+                card.businessValue = RootCause;
+            }
+        }
 
 
         private List<string> locations;
@@ -66,7 +96,10 @@ namespace DFS.ViewModel
             }
         }
 
+        public string Base64Image { get; set; }
+
         private List<string> processSteps;
+        private List<ProcessStepModel> processStepResult;
 
         public List<string> ProcessSteps
         {
@@ -86,17 +119,37 @@ namespace DFS.ViewModel
             set
             {
                 selectedProcessStep = value;
+
                 OnPropertyChanged("SelectedProcessStep");
+                card.processId = GetProcessId();
             }
         }
 
+        private int GetProcessId()
+        {
+            return processStepResult.Where(x => x.processName.Equals(selectedProcessStep)).Select(x => x.processId).FirstOrDefault();
+        }
 
         private async void LoadProcessSteps()
         {
             IGetProcessSteps processStepService = new CreateCardService();
             var deptId = deptResult.Where(x => x.departmentName.Equals(SelectedDepartment)).Select(x => x.departmentId).FirstOrDefault();
-            var processStepResult = await processStepService.GetProcessStep(GetLocationId().FirstOrDefault(), GetFlowId(), deptId);
+            card.departmentId = deptId;
+            var flowId = GetFlowId();
+            card.dynamicFlowId = flowId;
+            processStepResult = await processStepService.GetProcessStep(GetLocationId().FirstOrDefault(), flowId, deptId);
             ProcessSteps = processStepResult.Select(x => x.processName).ToList();
+            SubmitCommand = new Command(InvokeSubmitCommand);
+        }
+
+        private void InvokeSubmitCommand(object obj)
+        {
+            IPostCardService cardService = new CreateCardService();
+            card.cardTitle = Title;
+            card.descriptionImage = Base64Image;
+            card.clientId = App.User.;
+            card.auditUserId = App.User.cclientIdlientId;
+            cardService.PostCard(card);
 
         }
 
@@ -168,7 +221,7 @@ namespace DFS.ViewModel
             IGetDynamicFlow GetFlow = new CreateCardService();
             IEnumerable<int> locationId = GetLocationId();
             flowResult = await GetFlow.GetDynamicFlow(locationId.FirstOrDefault());
-
+            card.clientLocationId = locationId.FirstOrDefault();
             DynamicFlows = flowResult.Select(x => x.dynamicFlowName).ToList();
 
         }
@@ -196,6 +249,7 @@ namespace DFS.ViewModel
             IGetDepartments getDeptService = new CreateCardService();
             IEnumerable<int> locationId = GetLocationId();
             int flowId = GetFlowId();
+            card.dynamicFlowId = flowId;
             deptResult = await getDeptService.GetDepartments(locationId.FirstOrDefault(), flowId);
 
             Departments = deptResult.Select(x => x.departmentName).ToList();
@@ -233,10 +287,6 @@ namespace DFS.ViewModel
             ICreateCardService service = new CreateCardService();
 
             locationResult = await service.GetLocations();
-
-            IGetProcessSteps process = new CreateCardService();
-          
-
 
             Locations = locationResult.Select(x => x.clientLocationName).ToList();
         }

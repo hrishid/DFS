@@ -48,6 +48,12 @@
                     Grid.Row="3"
                     BackgroundColor="White"
                     HeightRequest="250"/>
+                <Label Text="Root Cause of the issue/Business Case" Grid.Row="2"></Label>
+                <Editor Text="{Binding RootCause}" 
+                    Grid.Row="3"
+                    BackgroundColor="White"
+                    HeightRequest="250"/>
+
                 <StackLayout Grid.Row="4" Orientation="Horizontal" Spacing="20">
                     <Label Text="Add Image"></Label>
                     <Image Source="addalbum.png" HeightRequest="40" WidthRequest="40">
@@ -58,7 +64,7 @@
                 </StackLayout>
                 <Image x:Name="image" Grid.Row="5" HeightRequest="90"/>
                 <Button Text="Create Card"
-                    Clicked="Button_Clicked"
+                    Command="{Binding SubmitCommand}"
                     Grid.Row="6"
                     TextColor="White" 
                     BackgroundColor="#1FBED6"></Button>
