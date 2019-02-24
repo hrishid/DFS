@@ -37,23 +37,41 @@ namespace DFS.Services
         Task<bool> PostCard(CICardModel card);
     }
 
+    
+
 
 
     public class CreateCardService :BaseAPI, ICreateCardService, IGetDynamicFlow,IGetDepartments,IGetBucketList, IGetProcessSteps, IPostCardService
     {
         public async Task<bool>PostCard(CICardModel card)
         {
-            using (var client = CreateClient("CiDashBoard/buckets?ClientID=" + App.User.clientId))
+            using (var client = CreateClient("CiDashBoard"))
             {
-                StringContent content = new StringContent(JsonConvert.SerializeObject(card));
-
-                HttpResponseMessage response = await client.PostAsync(client.BaseAddress,).ConfigureAwait(false);
-                if (response.IsSuccessStatusCode)
+                try
                 {
-                    return true;
+                   // card.bucketId = 1;
+                    
+
+                    StringContent content = new StringContent(JsonConvert.SerializeObject(card),Encoding.UTF8,"application/json");
+
+                   // client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json-patch+json"));
+                   
+                    HttpResponseMessage response = await client.PostAsync(client.BaseAddress, content).ConfigureAwait(false);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return true;
+                    }
+                }
+                catch (Exception ex) 
+                {
+
+                    throw;
                 }
 
                 return false;
+
+
+
 
             }
         }
@@ -79,7 +97,7 @@ namespace DFS.Services
 
         public async Task<List<DepartmentModel>> GetDepartments(int locationId, int dynamicFlowId)
         {
-            using (var client = CreateClient(string.Format("CiDashBoard/departments?dynamicFlowId={0}?locationId={1}", dynamicFlowId,locationId)))
+            using (var client = CreateClient(string.Format("CiDashBoard/departments?locationId={0}&dynamicFlowId={1}", locationId, dynamicFlowId)))
             {
                 HttpResponseMessage response = await client.GetAsync(client.BaseAddress).ConfigureAwait(false);
                 if (response.IsSuccessStatusCode)

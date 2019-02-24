@@ -36,10 +36,11 @@ namespace DFS.Views.Menu
                 {
                     new Models.MenuItem { Title = "Home", MenuType = MenuType.Home, Icon ="home.png" },
                     //new Models.MenuItem { Title = "Time Table", MenuType = MenuType.TimeTable, Icon = "Attendance.png" },
-                    new Models.MenuItem { Title = "CI Cards", MenuType = MenuType.CICards, Icon = "home.png" },
+                    new Models.MenuItem { Title = "Create CI Cards", MenuType = MenuType.CICards, Icon = "home.png" },
                     ////new Models.MenuItem { Title = "Attendance", MenuType = MenuType.Attendance, Icon = "attendanceicon.png" },
+                     new Models.MenuItem { Title = "My Cards", MenuType = MenuType.MyCards, Icon = "home.png" },
                     new Models.MenuItem { Title = "Profile", MenuType = MenuType.Profile, Icon = "ic_account_circle_black_24dp.png" },
-                     //new Models.MenuItem { Title = "Gallery", MenuType = MenuType.Gallery, Icon = "GalleryIcon.png" },
+                    
                      // new Models.MenuItem { Title = "Alerts", MenuType = MenuType.Alert, Icon = "AlertIcon.png" },
                     new Models.MenuItem { Title = "Sign Out", MenuType = MenuType.Signout, Icon = "signout.png" },
                 };

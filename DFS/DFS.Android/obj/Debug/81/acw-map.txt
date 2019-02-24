@@ -1,6 +1,3 @@
-DFS.Droid.CustomEntryRenderer, DFS.Android;md5b10129a092ba19179f13870cd56a5d00.CustomEntryRenderer
-DFS.Droid.CustomEntryRenderer;md5b10129a092ba19179f13870cd56a5d00.CustomEntryRenderer
-dfs.droid.CustomEntryRenderer;md5b10129a092ba19179f13870cd56a5d00.CustomEntryRenderer
 DFS.Droid.MainActivity, DFS.Android;md5b10129a092ba19179f13870cd56a5d00.MainActivity
 DFS.Droid.MainActivity;md5b10129a092ba19179f13870cd56a5d00.MainActivity
 dfs.droid.MainActivity;md5b10129a092ba19179f13870cd56a5d00.MainActivity

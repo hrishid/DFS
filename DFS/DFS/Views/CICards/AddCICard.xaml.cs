@@ -1,4 +1,5 @@
-﻿using DFS.ViewModel;
+﻿using DFS.Services.Models;
+using DFS.ViewModel;
 using Plugin.Media;
 using System;
 using System.Collections.Generic;
@@ -12,16 +13,25 @@ using Xamarin.Forms.Xaml;
 
 namespace DFS.Views.CICards
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class AddCICard : ContentPage
-	{
-        AddCardViewModel vm = new AddCardViewModel();
-        public AddCICard ()
-		{
-			InitializeComponent ();
-
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class AddCICard : ContentPage
+    {
+        Action callBack;
+        AddCardViewModel vm;
+        public AddCICard()
+        {
+            InitializeComponent();
+            callBack = new Action(ShowMessage);
+           vm = new AddCardViewModel(callBack);
             BindingContext = vm;
 
+        }
+        private void ShowMessage()
+        {
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                DisplayAlert("Success!", "Card created successfully", "ok");
+            });
         }
 
         private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
@@ -31,12 +41,15 @@ namespace DFS.Views.CICards
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-           
+
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             await CrossMedia.Current.Initialize();
+
+            IGetCards service = new GetCardService();
+
 
             if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
             {
@@ -50,8 +63,8 @@ namespace DFS.Views.CICards
                 Name = "test.jpg"
             });
 
-           
-            
+
+
 
             if (file == null)
                 return;
@@ -60,13 +73,13 @@ namespace DFS.Views.CICards
             Stream stream = null;
             image.Source = ImageSource.FromStream(() =>
             {
-                 stream = file.GetStream();
+                stream = file.GetStream();
 
                 return stream;
             });
             var bytes = new byte[stream.Length];
             await stream.ReadAsync(bytes, 0, (int)stream.Length);
-            vm.Base64Image  = System.Convert.ToBase64String(bytes);
+            vm.Base64Image = System.Convert.ToBase64String(bytes);
         }
     }
 }

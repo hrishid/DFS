@@ -55,15 +55,6 @@ E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\obj\iPhoneSimulator\Deb
 E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
 E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
 E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
-E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\obj\iPhoneSimulator\Debug\optimized\home.png
-E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\obj\iPhoneSimulator\Debug\optimized\ic_account_circle_black_24dp.png
-E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\obj\iPhoneSimulator\Debug\optimized\iconPassword.png
-E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\obj\iPhoneSimulator\Debug\optimized\iconUsername.png
-E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\obj\iPhoneSimulator\Debug\optimized\ic_email_black_24dp.png
-E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\obj\iPhoneSimulator\Debug\optimized\ic_format_list_numbered_black_24dp.png
-E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\obj\iPhoneSimulator\Debug\optimized\ic_phone_black_24dp.png
-E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\obj\iPhoneSimulator\Debug\optimized\signout.png
-E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\obj\iPhoneSimulator\Debug\optimized\if_home_1372383.png
 E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\obj\iPhoneSimulator\Debug\optimized\
 E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\obj\iPhoneSimulator\Debug\DFS.iOS.csprojAssemblyReference.cache
 E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\obj\iPhoneSimulator\Debug\DFS.iOS.csproj.CoreCompileInputs.cache
@@ -80,4 +71,3 @@ E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\bin\iPhoneSimulator\Deb
 E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\bin\iPhoneSimulator\Debug\Plugin.Permissions.dll
 E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\bin\iPhoneSimulator\Debug\Plugin.Permissions.pdb
 E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\bin\iPhoneSimulator\Debug\Plugin.Media.dll
-E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS.iOS\obj\iPhoneSimulator\Debug\optimized\addalbum.png

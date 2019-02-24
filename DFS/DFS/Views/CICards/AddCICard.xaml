@@ -15,11 +15,13 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Entry HorizontalOptions="FillAndExpand" Grid.Row="0" Placeholder="Card Name" ></Entry>
+                <Entry HorizontalOptions="FillAndExpand" Grid.Row="0" Text="{Binding CardTitle}" Placeholder="Card Name" ></Entry>
                 <StackLayout Orientation="Horizontal" Grid.Row="1"  Spacing="20"  HorizontalOptions="FillAndExpand">
                     <StackLayout Orientation="Vertical" Spacing="20" HorizontalOptions="FillAndExpand">
-                       
+
                         <Label Text="Locations"></Label>
                         <Picker ItemsSource="{Binding Locations}" Title="Select" SelectedItem="{Binding SelectedLocation}"></Picker>
                         <Label Text="Department"></Label>
@@ -31,7 +33,7 @@
                                TextColor="White" Text="{Binding UserName}"></Label>
                     </StackLayout>
                     <StackLayout HorizontalOptions="FillAndExpand" Spacing="20">
-                        
+
                         <Label Text="Value Stream"></Label>
                         <Picker ItemsSource="{Binding DynamicFlows}" Title="Select" SelectedItem="{Binding SelectedFlow}"></Picker>
                         <Label Text="Process Steps"></Label>
@@ -47,14 +49,14 @@
                 <Editor Text="{Binding DescriptionText}" 
                     Grid.Row="3"
                     BackgroundColor="White"
-                    HeightRequest="250"/>
-                <Label Text="Root Cause of the issue/Business Case" Grid.Row="2"></Label>
+                    HeightRequest="100"/>
+                <Label Text="Root Cause of the issue/Business Case" Grid.Row="4"></Label>
                 <Editor Text="{Binding RootCause}" 
-                    Grid.Row="3"
+                    Grid.Row="5"
                     BackgroundColor="White"
-                    HeightRequest="250"/>
+                    HeightRequest="100"/>
 
-                <StackLayout Grid.Row="4" Orientation="Horizontal" Spacing="20">
+                <StackLayout Grid.Row="6" Orientation="Horizontal" Spacing="20">
                     <Label Text="Add Image"></Label>
                     <Image Source="addalbum.png" HeightRequest="40" WidthRequest="40">
                         <Image.GestureRecognizers>
@@ -62,10 +64,10 @@
                         </Image.GestureRecognizers>
                     </Image>
                 </StackLayout>
-                <Image x:Name="image" Grid.Row="5" HeightRequest="90"/>
+                <Image x:Name="image" Grid.Row="7" HeightRequest="90"/>
                 <Button Text="Create Card"
                     Command="{Binding SubmitCommand}"
-                    Grid.Row="6"
+                    Grid.Row="8"
                     TextColor="White" 
                     BackgroundColor="#1FBED6"></Button>
             </Grid>

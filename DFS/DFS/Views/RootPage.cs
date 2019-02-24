@@ -1,6 +1,7 @@
 ﻿using DFS.Helpers;
 using DFS.ViewModel;
 using DFS.Views.CICards;
+using DFS.Views.DisplayCard;
 using DFS.Views.Menu;
 using DFS.Views.Profile;
 using System;
@@ -62,9 +63,9 @@ namespace DFS.Views
                         //case MenuType.Attendance:
                         //    Pages.Add(id, new CustomNavigationPage(new MonthView()));
                         //    break;
-                        //case MenuType.Gallery:
-                        //    Pages.Add(id, new CustomNavigationPage(new GalleryMainView()));
-                        //    break;
+                        case MenuType.MyCards:
+                            Pages.Add(id, new CustomNavigationPage(new DisplayCardPage()));
+                            break;
                         //case MenuType.Alert:
                         //    Pages.Add(id, new CustomNavigationPage(new AlertsPage()));
                         //    break;

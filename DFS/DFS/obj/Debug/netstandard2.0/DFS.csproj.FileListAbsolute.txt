@@ -1,8 +1,11 @@
 E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS\bin\Debug\netstandard2.0\DFS.deps.json
 E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS\bin\Debug\netstandard2.0\DFS.dll
 E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS\bin\Debug\netstandard2.0\DFS.pdb
+E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS\obj\Debug\netstandard2.0\DFS.csprojAssemblyReference.cache
 E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS\obj\Debug\netstandard2.0\App.xaml.g.cs
 E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS\obj\Debug\netstandard2.0\Views\CICards\AddCICard.xaml.g.cs
+E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS\obj\Debug\netstandard2.0\Views\DisplayCard\DisplayCardPage.xaml.g.cs
 E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
 E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS\obj\Debug\netstandard2.0\Views\Menu\MenuPage.xaml.g.cs
 E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS\obj\Debug\netstandard2.0\Views\Profile\ProfilePage.xaml.g.cs
@@ -12,5 +15,3 @@ E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS\obj\Debug\netstandard2.0\DF
 E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS\obj\Debug\netstandard2.0\XamlC.stamp
 E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS\obj\Debug\netstandard2.0\DFS.dll
 E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS\obj\Debug\netstandard2.0\DFS.pdb
-E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS\obj\Debug\netstandard2.0\DFS.csprojAssemblyReference.cache
-E:\.NET Study Material\Xamarin\DFS_Vivek\DFS\DFS\DFS\obj\Debug\netstandard2.0\Views\CICards\AddCICard.xaml.g.cs

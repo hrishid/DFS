@@ -37,11 +37,13 @@
                                        ></Image>
                                 <Label Text="{Binding Header}"
                                    Grid.Column="1"
+                                   TextColor="White"
                                    HorizontalOptions="Start"
                                    HorizontalTextAlignment="Start"
                                    ></Label>
                                 <Label Text="{Binding paramter}"                                  
                                    HorizontalOptions="Start"
+                                   TextColor="White"
                                    HorizontalTextAlignment="Start"
                                    Grid.Column="2"></Label>
                             </Grid>

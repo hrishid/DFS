@@ -629,6 +629,7 @@
         "lib/monoandroid80/Plugin.Permissions.dll",
         "lib/monoandroid80/Plugin.Permissions.pdb",
         "lib/monoandroid81/Plugin.Permissions.dll",
+        "lib/monoandroid81/Plugin.Permissions.dll.mdb",
         "lib/monoandroid81/Plugin.Permissions.pdb",
         "lib/netstandard1.0/Plugin.Permissions.dll",
         "lib/netstandard1.0/Plugin.Permissions.pdb",
@@ -638,6 +639,7 @@
         "lib/uap10.0.16299/Plugin.Permissions.pdb",
         "lib/uap10.0.16299/Plugin.Permissions.pri",
         "lib/xamarinios10/Plugin.Permissions.dll",
+        "lib/xamarinios10/Plugin.Permissions.dll.mdb",
         "lib/xamarinios10/Plugin.Permissions.pdb",
         "plugin.permissions.4.0.2-beta.nupkg.sha512",
         "plugin.permissions.nuspec",
@@ -825,6 +827,7 @@
       "type": "package",
       "path": "xam.plugins.forms.imagecircle/3.0.0.5",
       "files": [
+        ".nupkg.metadata",
         "lib/monoandroid71/ImageCircle.Forms.Plugin.dll",
         "lib/monoandroid71/ImageCircle.Forms.Plugin.xml",
         "lib/netstandard1.0/ImageCircle.Forms.Plugin.dll",
@@ -888,6 +891,7 @@
       "type": "package",
       "path": "xamarin.android.support.animated.vector.drawable/27.0.2",
       "files": [
+        ".nupkg.metadata",
         "THIRD-PARTY-NOTICES.txt",
         "build/MonoAndroid81/Xamarin.Android.Support.Animated.Vector.Drawable.targets",
         "lib/MonoAndroid81/Xamarin.Android.Support.Animated.Vector.Drawable.dll",
@@ -929,6 +933,7 @@
       "type": "package",
       "path": "xamarin.android.support.core.ui/27.0.2",
       "files": [
+        ".nupkg.metadata",
         "THIRD-PARTY-NOTICES.txt",
         "build/MonoAndroid81/Xamarin.Android.Support.Core.UI.targets",
         "lib/MonoAndroid81/Xamarin.Android.Support.Core.UI.dll",
@@ -956,6 +961,7 @@
       "type": "package",
       "path": "xamarin.android.support.design/27.0.2",
       "files": [
+        ".nupkg.metadata",
         "THIRD-PARTY-NOTICES.txt",
         "build/MonoAndroid81/Xamarin.Android.Support.Design.targets",
         "lib/MonoAndroid81/Xamarin.Android.Support.Design.dll",
@@ -969,6 +975,7 @@
       "type": "package",
       "path": "xamarin.android.support.fragment/27.0.2",
       "files": [
+        ".nupkg.metadata",
         "THIRD-PARTY-NOTICES.txt",
         "build/MonoAndroid81/Xamarin.Android.Support.Fragment.targets",
         "lib/MonoAndroid81/Xamarin.Android.Support.Fragment.dll",
@@ -981,6 +988,7 @@
       "type": "package",
       "path": "xamarin.android.support.media.compat/27.0.2",
       "files": [
+        ".nupkg.metadata",
         "THIRD-PARTY-NOTICES.txt",
         "build/MonoAndroid81/Xamarin.Android.Support.Media.Compat.targets",
         "lib/MonoAndroid81/Xamarin.Android.Support.Media.Compat.dll",
@@ -994,6 +1002,7 @@
       "type": "package",
       "path": "xamarin.android.support.transition/27.0.2",
       "files": [
+        ".nupkg.metadata",
         "THIRD-PARTY-NOTICES.txt",
         "build/MonoAndroid81/Xamarin.Android.Support.Transition.targets",
         "lib/MonoAndroid81/Xamarin.Android.Support.Transition.dll",
@@ -1007,6 +1016,7 @@
       "type": "package",
       "path": "xamarin.android.support.v4/27.0.2",
       "files": [
+        ".nupkg.metadata",
         "THIRD-PARTY-NOTICES.txt",
         "build/MonoAndroid81/Xamarin.Android.Support.v4.targets",
         "lib/MonoAndroid81/Xamarin.Android.Support.v4.dll",
@@ -1019,6 +1029,7 @@
       "type": "package",
       "path": "xamarin.android.support.v7.appcompat/27.0.2",
       "files": [
+        ".nupkg.metadata",
         "THIRD-PARTY-NOTICES.txt",
         "build/MonoAndroid81/Xamarin.Android.Support.v7.AppCompat.targets",
         "lib/MonoAndroid81/Xamarin.Android.Support.v7.AppCompat.dll",
@@ -1031,6 +1042,7 @@
       "type": "package",
       "path": "xamarin.android.support.v7.cardview/27.0.2",
       "files": [
+        ".nupkg.metadata",
         "THIRD-PARTY-NOTICES.txt",
         "build/MonoAndroid81/Xamarin.Android.Support.v7.CardView.targets",
         "lib/MonoAndroid81/Xamarin.Android.Support.v7.CardView.dll",
@@ -1043,6 +1055,7 @@
       "type": "package",
       "path": "xamarin.android.support.v7.mediarouter/27.0.2",
       "files": [
+        ".nupkg.metadata",
         "THIRD-PARTY-NOTICES.txt",
         "build/MonoAndroid81/Xamarin.Android.Support.v7.MediaRouter.targets",
         "lib/MonoAndroid81/Xamarin.Android.Support.v7.MediaRouter.dll",
@@ -1055,6 +1068,7 @@
       "type": "package",
       "path": "xamarin.android.support.v7.palette/27.0.2",
       "files": [
+        ".nupkg.metadata",
         "THIRD-PARTY-NOTICES.txt",
         "build/MonoAndroid81/Xamarin.Android.Support.v7.Palette.targets",
         "lib/MonoAndroid81/Xamarin.Android.Support.v7.Palette.dll",
@@ -1067,6 +1081,7 @@
       "type": "package",
       "path": "xamarin.android.support.v7.recyclerview/27.0.2",
       "files": [
+        ".nupkg.metadata",
         "THIRD-PARTY-NOTICES.txt",
         "build/MonoAndroid81/Xamarin.Android.Support.v7.RecyclerView.targets",
         "lib/MonoAndroid81/Xamarin.Android.Support.v7.RecyclerView.dll",
@@ -1080,6 +1095,7 @@
       "type": "package",
       "path": "xamarin.android.support.vector.drawable/27.0.2",
       "files": [
+        ".nupkg.metadata",
         "THIRD-PARTY-NOTICES.txt",
         "build/MonoAndroid81/Xamarin.Android.Support.Tasks.VectorDrawable.dll",
         "build/MonoAndroid81/Xamarin.Android.Support.Vector.Drawable.targets",

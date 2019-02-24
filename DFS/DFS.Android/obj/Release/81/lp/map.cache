@@ -5,6 +5,9 @@ Microcharts
 Microcharts.Droid
 Microcharts.Forms
 Newtonsoft.Json
+Plugin.CurrentActivity
+Plugin.Media
+Plugin.Permissions
 Rg.Plugins.Popup
 Rg.Plugins.Popup.Droid
 SkiaSharp
@@ -34,9 +37,3 @@ Xamarin.Forms.Core
 Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
-netstandard
-System.Collections
-System.Reflection.Extensions
-Plugin.CurrentActivity
-Plugin.Media
-Plugin.Permissions

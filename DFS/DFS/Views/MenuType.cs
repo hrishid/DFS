@@ -7,7 +7,7 @@
         TimeTable,
         CICards,
         Attendance,
-        Gallery,
+        MyCards,
         Signout,
         Alert
     }

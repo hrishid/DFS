@@ -209,6 +209,7 @@
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
+        ".nupkg.metadata",
         "Microsoft.NETCore.Platforms.1.1.0.nupkg.sha512",
         "Microsoft.NETCore.Platforms.nuspec",
         "ThirdPartyNotices.txt",
@@ -222,6 +223,7 @@
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
+        ".nupkg.metadata",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -395,6 +397,7 @@
         "lib/monoandroid80/Plugin.Permissions.dll",
         "lib/monoandroid80/Plugin.Permissions.pdb",
         "lib/monoandroid81/Plugin.Permissions.dll",
+        "lib/monoandroid81/Plugin.Permissions.dll.mdb",
         "lib/monoandroid81/Plugin.Permissions.pdb",
         "lib/netstandard1.0/Plugin.Permissions.dll",
         "lib/netstandard1.0/Plugin.Permissions.pdb",
@@ -404,6 +407,7 @@
         "lib/uap10.0.16299/Plugin.Permissions.pdb",
         "lib/uap10.0.16299/Plugin.Permissions.pri",
         "lib/xamarinios10/Plugin.Permissions.dll",
+        "lib/xamarinios10/Plugin.Permissions.dll.mdb",
         "lib/xamarinios10/Plugin.Permissions.pdb",
         "plugin.permissions.4.0.2-beta.nupkg.sha512",
         "plugin.permissions.nuspec",
@@ -573,6 +577,7 @@
       "type": "package",
       "path": "xam.plugins.forms.imagecircle/3.0.0.5",
       "files": [
+        ".nupkg.metadata",
         "lib/monoandroid71/ImageCircle.Forms.Plugin.dll",
         "lib/monoandroid71/ImageCircle.Forms.Plugin.xml",
         "lib/netstandard1.0/ImageCircle.Forms.Plugin.dll",
